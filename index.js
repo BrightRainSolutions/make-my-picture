@@ -1,4 +1,6 @@
-
+// RESOURCES
+// https://usefulangle.com/post/352/javascript-capture-image-from-camera
+// https://usefulangle.com/post/355/javascript-get-camera-resolution
 document.addEventListener("DOMContentLoaded", () => {
 	// PWA support: register service worker
 	if ("sw" in navigator) {
@@ -33,16 +35,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
 		stream_settings = stream.getVideoTracks()[0].getSettings();
 
-		// actual width & height of the camera video
-		let stream_width = stream_settings.width;
-		let stream_height = stream_settings.height;
-
-		console.log('camera width: ' + stream_width + 'px');
-		console.log('camera height: ' + stream_height + 'px');
-
 	}
 
 	function takePhoto() {
+		// set the canvas size and image size to the video size which we set to the width and height of the viewport
 		canvas.width = stream_settings.width;
 		canvas.height = stream_settings.height;
 		canvas.getContext('2d').drawImage(camera, 0, 0, stream_settings.width, stream_settings.height);
