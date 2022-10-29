@@ -1,2 +1,2 @@
 # make-my-picture
-Let's make a picture and store it (using the camera api in a PWA), k?
+Let's make a picture (using the camera api in a PWA), k?

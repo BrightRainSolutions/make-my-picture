@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="manifest" href="manifest.json" />
+  <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="MAKE MY PICTURE">
+  <meta name="apple-mobile-web-app-status-bar" content="#ff6600" />
+  <meta name="theme-color" content="#0044aa" />
+  <link rel="icon" href="assets/camera.svg">
+  <title>MAKE MY PICTURE</title>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+  <link href="index.css" rel="stylesheet">
+  <script src="index.js"></script>
+</head>
+
+<body>
+  <main>
+    <h1 id="title" class="primary-orange">
+      <span>MAKE MY PICTURE</span>
+      <img id="header-camera" src="assets/camera.svg">
+      </h1>
+    <button id='get-user-media-btn' title="take a picture">
+      <b>Take Picture</b><br>
+      <img id="camera-icon" src="assets/camera.svg" width="60px">
+    </button>
+    <div id="camera-container">
+      <button id='snap-btn'></button>
+      <video id="camera" autoplay></video>
+      <span id='back-to-start' class="back-arrow arrow left" title="go back to start"></span>
+    </div>
+    <div>
+      <div id="picture-container">
+        <span id='back-to-camera' class="back-arrow arrow left" title="go back to camera"></span>
+        <canvas id='picture-canvas'></canvas>
+      </div>
+    </div>
+  </main>
+</body>
+
+</html>
