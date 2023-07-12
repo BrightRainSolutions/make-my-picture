@@ -9,7 +9,7 @@
   <meta name="apple-mobile-web-app-title" content="MAKE MY PICTURE">
   <meta name="apple-mobile-web-app-status-bar" content="#ff6600" />
   <meta name="theme-color" content="#0044aa" />
-  <link rel="icon" href="assets/camera.svg">
+  <link rel="icon" href="/assets/camera.svg">
   <title>MAKE MY PICTURE</title>
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
   <link href="index.css" rel="stylesheet">
@@ -21,11 +21,22 @@
     <h1 id="title" class="primary-orange">
       <span>MAKE MY PICTURE</span>
       <img id="header-camera" src="assets/camera.svg">
-      </h1>
-    <button id='get-user-media-btn' title="take a picture">
-      <b>Take Picture</b><br>
-      <img id="camera-icon" src="assets/camera.svg" width="60px">
-    </button>
+    </h1>
+    <div id="picture-options-container">
+      <button id='get-user-media-btn' title="take a picture">
+        <b>Take Picture</b><br>
+        <img id="camera-icon" src="assets/camera.svg" width="60px">
+      </button>
+      <br>
+      <button id='upload-picture-btn' title="upload a picture">
+        <b>Upload Selected Pictures</b><br>
+        <img id="camera-icon" src="assets/upload.svg" width="100px">
+      </button>
+      <form id="upload-form">
+        Select pictures:<br>
+        <input type="file" id="uploadFile" name="uploadFile" accept="image/*" multiple>
+      </form>
+    </div>
     <div id="camera-container">
       <button id='snap-btn'></button>
       <video id="camera" autoplay></video>
@@ -38,6 +49,7 @@
       </div>
     </div>
   </main>
+  <div id="snackbar">snack attack</div>
 </body>
 
 </html>
